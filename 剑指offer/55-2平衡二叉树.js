@@ -16,6 +16,7 @@ var Maxlength = function(root) {
     return Math.max(Maxlength(root.left),Maxlength(root.right)) + 1;
 }
 
+
 //后序遍历 剪枝
 var isBalanced = function(root) {
     return recur(root) != -1;

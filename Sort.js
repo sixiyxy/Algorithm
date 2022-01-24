@@ -36,7 +36,7 @@ var insertSort = function( nums ){
         if(nums[i] < nums[i-1]){
             let temp = nums[i];
             let j;
-            for(j = i-1; nums[j] > temp; j--){
+            for(j = i-1; nums[j] > temp && j > -1; j--){
                 nums[j+1] = nums[j];
             }
             nums[j+1] = temp;
@@ -107,7 +107,7 @@ function quickSort(nums ,low, high){
 function Partition(nums, low, high){
     let pivot = nums[low];
     while(low < high){
-        while(low<high && nums[high]>=pivot){
+        while(low<high && nums[high]>=pivot){     //注意等号 注意先比大的
             high --;
         }
         [nums[low],nums[high]] = [nums[high],nums[low]];

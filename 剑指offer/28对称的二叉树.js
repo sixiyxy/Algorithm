@@ -23,6 +23,8 @@ const check = (leftPtr, rightPtr) => {
     return leftPtr.val === rightPtr.val && check(leftPtr.left, rightPtr.right) && check(leftPtr.right, rightPtr.left)
 }
 
+
+
 //增加判断
 var isSymmetric = function(root) {
     if(!root) return true;

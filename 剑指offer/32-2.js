@@ -26,7 +26,7 @@ var levelOrder = function(root) {
     
     if (!root) return []
 
-    const queue = [[root, 0]], res = []
+    const queue = [[root, 0]], res = [];
 
     while (queue.length) {
         const [node, level] = queue.shift()

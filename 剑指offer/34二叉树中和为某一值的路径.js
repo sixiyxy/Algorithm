@@ -9,14 +9,14 @@ var pathSum = function(root, target) {
     const res = [];
 
     var dfs = function(node, tar) {
-        if(!root) return;
+        if(!node) return;
         path.push(node.val);
         tar -= node.val;
-        if(!root.left && !root.right && tar === 0){
+        if(!node.left && !node.right && tar === 0){
             res.push([...path]);           //注意此处的解构赋值
         }
-        dfs(root.left, tar);
-        dfs(root.right, tar);
+        dfs(node.left, tar);
+        dfs(node.right, tar);
         path.pop();     //注意此处的pop
     }
 
